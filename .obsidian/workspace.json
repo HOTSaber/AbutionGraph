@@ -1,0 +1,156 @@
+{
+  "main": {
+    "id": "91760beec1d7766c",
+    "type": "split",
+    "children": [
+      {
+        "id": "7bf9860199df2f46",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b9616695b71ed10a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/AremlinAPI/数据源.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d18313cdbe64d65e",
+    "type": "split",
+    "children": [
+      {
+        "id": "82de34c9c0f415bb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "05329f8c25e9092a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8d4a8aa99efb7026",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "dbf86d24d531a9f3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4231c6f35107ba4f",
+    "type": "split",
+    "children": [
+      {
+        "id": "02824ab120a49401",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ba181d1fe3ca3d8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/AremlinAPI/数据源.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0a018136b2655f9b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/AremlinAPI/数据源.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4d6a7a8ccb85d38a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4110e6e7ee482773",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/AremlinAPI/数据源.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "b9616695b71ed10a",
+  "lastOpenFiles": [
+    "docs/AremlinAPI/聚合函数.md",
+    "docs/AremlinAPI/过滤函数.md",
+    "docs/AremlinAPI/查询语法.md",
+    "docs/AbutionGraph-功能概览.md"
+  ]
+}
