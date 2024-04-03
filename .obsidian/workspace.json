@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/AremlinAPI/数据源.md",
+                "file": "README_original.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "528116877dba1a44",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/AremlinAPI/数据源.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/AremlinAPI/数据源.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/AremlinAPI/数据源.md"
+                "file": "README.md"
               }
             }
           }
@@ -146,8 +159,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "b9616695b71ed10a",
+  "active": "528116877dba1a44",
   "lastOpenFiles": [
+    "docs/~$utionGraph-2.8.0-安装文档.docx",
+    "README_original.md",
+    "README.md",
+    "docs/AremlinAPI/元数据管理.md",
+    "docs/AremlinAPI/数据源.md",
     "docs/AremlinAPI/聚合函数.md",
     "docs/AremlinAPI/过滤函数.md",
     "docs/AremlinAPI/查询语法.md",
