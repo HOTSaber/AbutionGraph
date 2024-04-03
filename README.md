@@ -49,6 +49,7 @@ Kafka-2.2.1
 Jcache
 
 **安装目录结构（JDK、Hadoop、AbutionDB），为了少改动系统环境变量，建议都装在/thutmose/app/（**mkdir -p /thutmose/app**）下**
+![安装目录结构](https://raw.githubusercontent.com/HOTSaber/AbutionGraph/tar.xz/images/%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png)
 ## 硬件版本
 最好是使用CentOS7或者Ubuntu18以上系统，不满足的话请升级系统内核gcc版本至8以上版本。由于我们实际上同时在整个群集中运行两个或三个系统：HDFS，AbutionDB和MapReduce，因此硬件通常由4至8个内核和8至32 GB RAM组成。这样一来，每个正在运行的进程至少可以具有一个内核，每个内核可以具有2-4 GB，提高吞吐和速度只需配置进程使用更多的资源。
 
