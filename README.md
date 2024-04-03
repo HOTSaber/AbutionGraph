@@ -1,5 +1,6 @@
 ****
 内容参考`/docs/AbutionGraph-2.8.0-安装文档.docx`中`AbutionGraph-完整版安装`的内容
+`abution_graph_db_install_package.tar.xz`请从release中下载
 ****
 # AbutionGraph下载
 modelscope下载地址:[AbutionGraph时序知识图谱数据库](https://modelscope.cn/models/AbutionGraph/abution_graph_db_install_package/summary)
