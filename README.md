@@ -254,9 +254,10 @@ ps : gc already running (1937756)
 ps : tracer already running (1937809)
 ```
 zookeeper启动，monitor、tserver、master、gc、tracer均已启动成功
-AbutionDB监控页面：ip:9995
 
-AbutionGraph-UI页面：ip:9995/graph
+**AbutionDB监控页面：ip:9995**
+
+**AbutionGraph-UI页面：ip:9995/graph**
 
 Abution起停命令：
 ```
@@ -266,6 +267,21 @@ abution-cluster restart
 ```
 
 停止zk：`zkServer.sh stop` （启动Abution前必须先启动zk）
+## Spark-3.3.2安装
+
+1. 在shell中使用`hadoop version`查看hadoop版本
+2. 访问[spark官网](https://spark.apache.org/downloads.html)的`Archived releases`下载Spark-3.3.2-without-hadoop。
+3. 使用以下命令解压:
+```
+tar -zxvf spark-3.3.2-bin-without-hadoop.tgz -C /thutmose/app/
+```
+4. 改名:
+```
+cd /thutmose/app
+mv ./spark-1.6.2-bin-without-hadoop/ ./spark
+```
+5. 环境已经在**环境配置**中配置过了，所以不用再次配置了
+## Hive-3.1.3安装
 # AbutionGraph命令
 停止AbutionGraph集群：
 1. abution-rest-stop.sh（若几秒后还存在Bootstrap进程，请kill掉）
@@ -282,4 +298,51 @@ HDFS启动/停止：start-dfs.sh / stop-dfs.sh
 
 清空缓存命令：echo 1 > /proc/sys/vm/drop_caches
 
-更多运维命令略。。。
+# Hive on Abution storage
+Hive是行式存储，检索效率底，但API很完善，拥有极大量的用户。Abution是列式存储，检索效率高，key-value的储存形式对于开发人员来说比较灵活，也意味着存储结构需要更深入的设计。而Hive-Abution-Storage则是将Abution用作Hive的数据存储，使用Hive的API来操作Abution，达到列式存储拥有表格存储的使用效果，并且达到列存的高效查询检索性能。
+**MySQL-8****的安装**
+
+1. 下载MySQL
+```
+sudo apt install mysql-server
+```
+在shell中使用`mysql -V`或在MySQL中使用`SELECT VERSION();`查看版本。
+2. 配置MySQL
+以下是在Ubuntu中执行你提供的命令的步骤：
+
+1. **打开终端**：你可以通过应用程序菜单搜索“终端”来打开它，或者使用快捷键`Ctrl + Alt + T`。
+    
+2. **登录MySQL**：  
+    首先，你需要登录到MySQL服务器。如果你已经设置了root用户的密码，你可以使用以下命令登录：
+    
+
+```bash
+mysql -u root -p
+```
+
+系统会提示你输入root用户的密码。输入正确的密码后，你将登录到MySQL提示符。
+
+3. **执行命令**：  
+    在MySQL提示符下，你可以直接执行SQL命令。对于你提供的命令，你应该这样做：
+
+```sql
+use mysql;
+select user,host from user;
+update user set authentication_string='' where user='root';
+--将字段置为空，注意修改用户名'raini'为自己的
+ALTER user 'root'@'localhost' IDENTIFIED BY 'abution-hive';
+flush PRIVILEGES;
+--修改 `root` 用户在 `localhost` 上的密码。`FLUSH PRIVILEGES` 语句用于立即重新加载授权表，这样您不需要重启MySQL服务器就能使密码更改生效。
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION; 
+--`GRANT` 命令会授予 `root` 用户在所有数据库和所有表上的所有权限，并且带有 `WITH GRANT OPTION`，这意味着 `root` 用户可以将这些权限授予其他用户。
+flush PRIVILEGES;
+```
+
+4. **退出MySQL**：  
+    完成所有操作后，你可以使用以下命令退出MySQL提示符：
+
+```sql
+EXIT;
+```
+
+或者简单地输入`quit`然后按回车。
